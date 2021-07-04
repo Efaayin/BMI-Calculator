@@ -24,24 +24,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    cardChild: Column(
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mars,
-                          size: 80.0,
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          'MALE',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            color: Color(0xFF8D8D98),
-                          ),
-                        )
-                      ],
-                    ),
+                    cardChild: IconContent(),
                     colour: Color(activeCardColour),
                   ),
                 ),
@@ -81,6 +64,32 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class IconContent extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          FontAwesomeIcons.mars,
+          size: 80.0,
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Text(
+          'MALE',
+          style: TextStyle(
+            fontSize: 18.0,
+            color: Color(0xFF8D8D98),
+          ),
+        )
+      ],
     );
   }
 }
