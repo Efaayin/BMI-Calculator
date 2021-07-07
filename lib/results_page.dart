@@ -13,6 +13,7 @@ class ResultsPage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
             child: Container(
@@ -29,6 +30,21 @@ class ResultsPage extends StatelessWidget {
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'NORMAL',
+                    style: kResultTextStyle,
+                  ),
+                  Text(
+                    '18.3',
+                    style: kBMITextStyle,
+                  ),
+                  Text(
+                    'Your BMI result is quite low, you should eat more',
+                    style: kBodyTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ),
           )
